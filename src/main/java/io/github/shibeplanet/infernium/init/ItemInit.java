@@ -76,6 +76,25 @@ public class ItemInit {
                 }
             });
 
+    /*Infernium Axe*/
+    public static final RegistryObject<AxeItem> INFERNIUM_AXE = ITEMS.register("infernium_axe",
+            () -> new AxeItem(Tiers.TIERFIVE, 6 /*ATK dmg*/, -2.8f /*ATK spd*/, new Item.Properties()
+                    .tab(Infernium.TAB)
+                    .fireResistant()
+            ) {
+                @Override
+                public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+                    super.appendHoverText(stack, level, components, flag);
+                    components.add(Component.translatable(Infernium.MODID + ".infernium_axe.tooltip"));
+                }
+
+                @Override
+                public boolean hurtEnemy(ItemStack stack, LivingEntity enemy, LivingEntity player) {
+                    enemy.setSecondsOnFire(3);
+                    return super.hurtEnemy(stack, enemy, player);
+                }
+            });
+
 
     // Dragonium Items
     /*Dragon Scale*/

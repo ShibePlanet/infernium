@@ -8,7 +8,8 @@
   "infernium.infernium_sword.tooltip": "\u00A76\u00A7oForged in the depths of The Nether centuries ago.\nA truly deadly sword.\u00A7r\n\n\u00A72Sets enemies on fire for 2 seconds when hit.",
   "item.infernium.infernium_pickaxe": "\u00A76\u00A7o\u00A7lInfernium Pickaxe",
   "infernium.infernium_pickaxe.tooltip": "\u00A76\u00A7oA powerful pickaxe that true miners use.\u00A7r\n\n\u00A72Sets enemies on fire for 2 seconds when hit.",
-
+  "item.infernium.infernium_axe": "\u00A76\u00A7o\u00A7lInfernium Axe",
+  "infernium.infernium_axe.tooltip": "\u00A76\u00A7oBuilt for war.\nThis axe has seen buckets of blood.\u00A7r\n\n\u00A72Sets enemies on fire for 3 seconds when hit.",
 
   "item.infernium.dragon_scale": "\u00A7dDragon Scale",
   "infernium.dragon_scale.tooltip": "It feels very rough.",
