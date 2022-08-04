@@ -23,7 +23,7 @@ public class ItemInit {
 
     //// Vanilla Bows
     /*Stone Bow*/
-    public static final RegistryObject<BowItem> STONE_BOW = ITEMS.register("stone_bow",
+    public static final RegistryObject<Item> STONE_BOW = ITEMS.register("stone_bow",
             () -> new BowItem(new Item.Properties()
                     .tab(CreativeModeTab.TAB_COMBAT)
                     .durability(515)

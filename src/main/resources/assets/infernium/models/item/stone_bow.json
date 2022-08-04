@@ -78,21 +78,21 @@
       "predicate": {
         "minecraft:pulling": 1
       },
-      "model": "infernium:items/stone_bow_pulling_0"
+      "model": "infernium:item/stone_bow_pulling_0"
     },
     {
       "predicate": {
         "minecraft:pulling": 1,
         "minecraft:pull": 0.65
       },
-      "model": "infernium:items/stone_bow_pulling_1"
+      "model": "infernium:item/stone_bow_pulling_1"
     },
     {
       "predicate": {
         "minecraft:pulling": 1,
         "minecraft:pull": 0.9
       },
-      "model": "infernium:items/stone_bow_pulling_2"
+      "model": "infernium:item/stone_bow_pulling_2"
     }
   ]
 }

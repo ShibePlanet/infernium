@@ -18,9 +18,11 @@ public class Infernium {
     public Infernium() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        bus.addListener(this::clientSetup);
-
         ItemInit.ITEMS.register(bus);
+
+        bus.addListener(this::clientSetup);
+//
+//        MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void clientSetup(final FMLClientSetupEvent event) {
