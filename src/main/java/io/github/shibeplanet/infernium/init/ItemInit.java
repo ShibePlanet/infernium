@@ -114,6 +114,25 @@ public class ItemInit {
                 }
             });
 
+    /*Infernium Hoe*/
+    public static final RegistryObject<HoeItem> INFERNIUM_HOE = ITEMS.register("infernium_hoe",
+            () -> new HoeItem(Tiers.TIERFIVE, -4 /*ATK dmg*/, -3f /*ATK spd*/, new Item.Properties()
+                    .tab(Infernium.TAB)
+                    .fireResistant()
+            ) {
+                @Override
+                public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+                    super.appendHoverText(stack, level, components, flag);
+                    components.add(Component.translatable(Infernium.MODID + ".infernium_hoe.tooltip"));
+                }
+
+                @Override
+                public boolean hurtEnemy(ItemStack stack, LivingEntity enemy, LivingEntity player) {
+                    enemy.setSecondsOnFire(1);
+                    return super.hurtEnemy(stack, enemy, player);
+                }
+            });
+
     // Dragonium Items
     /*Dragon Scale*/
     public static final RegistryObject<Item> DRAGON_SCALE = ITEMS.register("dragon_scale",

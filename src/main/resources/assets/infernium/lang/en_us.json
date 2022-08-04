@@ -12,6 +12,8 @@
   "infernium.infernium_axe.tooltip": "\u00A76\u00A7oBuilt for war and deforesting.\nThis axe has seen a lot of blood.\u00A7r\n\n\u00A72Sets enemies on fire for 3 seconds when hit.",
   "item.infernium.infernium_shovel": "\u00A76\u00A7o\u00A7lInfernium Shovel",
   "infernium.infernium_shovel.tooltip": "\u00A76\u00A7oPerfect for digging graves.\u00A7r\n\n\u00A72Sets enemies on fire for 2 seconds when hit.",
+  "item.infernium.infernium_hoe": "\u00A76\u00A7o\u00A7lInfernium Hoe",
+  "infernium.infernium_hoe.tooltip": "\u00A76\u00A7oDid you really just craft this?\u00A7r\n\n\u00A72Sets enemies on fire for 1 second when hit.",
 
   "item.infernium.dragon_scale": "\u00A7dDragon Scale",
   "infernium.dragon_scale.tooltip": "It feels very rough.",
