@@ -95,6 +95,24 @@ public class ItemInit {
                 }
             });
 
+    /*Infernium Shovel*/
+    public static final RegistryObject<ShovelItem> INFERNIUM_SHOVEL = ITEMS.register("infernium_shovel",
+            () -> new ShovelItem(Tiers.TIERFIVE, 2.5f /*ATK dmg*/, -2.8f /*ATK spd*/, new Item.Properties()
+                    .tab(Infernium.TAB)
+                    .fireResistant()
+            ) {
+                @Override
+                public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+                    super.appendHoverText(stack, level, components, flag);
+                    components.add(Component.translatable(Infernium.MODID + ".infernium_shovel.tooltip"));
+                }
+
+                @Override
+                public boolean hurtEnemy(ItemStack stack, LivingEntity enemy, LivingEntity player) {
+                    enemy.setSecondsOnFire(2);
+                    return super.hurtEnemy(stack, enemy, player);
+                }
+            });
 
     // Dragonium Items
     /*Dragon Scale*/
