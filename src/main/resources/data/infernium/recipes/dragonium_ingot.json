@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "oso",
+    "sns",
+    "oso"
+  ],
+  "key": {
+    "s": {
+      "item": "infernium:dragon_scale"
+    },
+    "o": {
+      "item": "minecraft:obsidian"
+    },
+    "n": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "result": {
+    "item": "infernium:dragonium_ingot"
+  }
+}

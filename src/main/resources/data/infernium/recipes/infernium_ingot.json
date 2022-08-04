@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "rgr",
+    "gng",
+    "rbr"
+  ],
+  "key": {
+    "r": {
+      "item": "minecraft:blaze_rod"
+    },
+    "g": {
+      "item": "minecraft:gold_ingot"
+    },
+    "n": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "b": {
+      "item": "minecraft:lava_bucket"
+    }
+  },
+  "result": {
+    "item": "infernium:infernium_ingot"
+  }
+}

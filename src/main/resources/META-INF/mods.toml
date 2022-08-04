@@ -1,0 +1,19 @@
+modLoader="javafml"
+loaderVersion="[41,)"
+license="MIT"
+
+[[mods]]
+modId="infernium"
+version="1.0"
+displayName="Infernium"
+#updateJSONURL="https://change.me.example.invalid/updates.json"
+#displayURL="https://change.me.to.your.mods.homepage.example.invalidid/"
+logoFile="examplemod.png"
+credits="ShibePlanet and LucasTM"
+authors="ShibePlanet and LucasTM"
+description='''
+Infernium
+Programmed by Shibeplanet.
+Art by LucasTM.
+'''
+

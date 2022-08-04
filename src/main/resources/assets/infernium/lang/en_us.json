@@ -1,0 +1,19 @@
+{
+  "itemGroup.infernium": "\u00A76\u00A7oInfernium",
+  "infernium.dev_tooltip": "\u00A77This is a developer item.",
+
+  "item.infernium.infernium_ingot": "\u00A76Infernium Ingot",
+  "infernium.infernium_ingot.tooltip": "It's warm to the touch.",
+  "item.infernium.infernium_sword": "\u00A76\u00A7o\u00A7lInfernium Sword",
+  "infernium.infernium_sword.tooltip": "\u00A76\u00A7oForged in the depths of The Nether centuries ago.\nA truly deadly sword.\u00A7r\n\n\u00A72Sets enemies on fire for 2 seconds when hit.",
+
+  "item.infernium.dragon_scale": "\u00A7dDragon Scale",
+  "infernium.dragon_scale.tooltip": "It feels very rough.",
+  "item.infernium.dragonium_ingot": "\u00A7dDragonium Ingot",
+  "infernium.dragonium_ingot.tooltip": "You can feel the energy pulsing.",
+
+  "item.infernium.one_mm_defeater": "\u00A76\u00A7o\u00A7lThe One Millimeter Defeater",
+  "infernium.one_mm_defeater.tooltip": "\u00A76\u00A7oIts average guys, I swear!",
+
+  "item.minecraft.bow": "Wooden Bow"
+}
