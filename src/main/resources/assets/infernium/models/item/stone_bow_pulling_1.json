@@ -1,0 +1,6 @@
+{
+  "parent": "infernium:items/stone_bow",
+  "textures": {
+    "layer0": "infernium:items/stone_bow_pulling_1"
+  }
+}

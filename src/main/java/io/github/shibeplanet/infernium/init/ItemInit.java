@@ -18,7 +18,21 @@ import java.util.List;
 public class ItemInit {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Infernium.MODID);
 
-    // Infernium Items
+
+
+
+    //// Vanilla Bows
+    /*Stone Bow*/
+    public static final RegistryObject<BowItem> STONE_BOW = ITEMS.register("stone_bow",
+            () -> new BowItem(new Item.Properties()
+                    .tab(CreativeModeTab.TAB_COMBAT)
+                    .durability(515)
+            ));
+
+
+
+
+    //// Infernium Items
     /*Infernium Ingot*/
     public static final RegistryObject<Item> INFERNIUM_INGOT = ITEMS.register("infernium_ingot",
             () -> new Item(new Item.Properties()
@@ -133,7 +147,10 @@ public class ItemInit {
                 }
             });
 
-    // Dragonium Items
+
+
+
+    //// Dragonium Items
     /*Dragon Scale*/
     public static final RegistryObject<Item> DRAGON_SCALE = ITEMS.register("dragon_scale",
             () -> new Item(new Item.Properties()
@@ -159,7 +176,9 @@ public class ItemInit {
     });
 
 
-    // Developer Items
+
+
+    //// Developer Items
     /*One Millimeter Defeater*/
     public static final RegistryObject<SwordItem> ONE_MM_DEFEATER = ITEMS.register("one_mm_defeater",
             () -> new SwordItem(Tiers.TIERMM, 1000 /*ATK dmg*/, 1000.0f /*ATK spd*/, new Item.Properties()
@@ -179,6 +198,7 @@ public class ItemInit {
                 }
 
     });
+
 
 
 
