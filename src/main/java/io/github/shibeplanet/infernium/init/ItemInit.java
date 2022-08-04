@@ -57,6 +57,25 @@ public class ItemInit {
                 }
     });
 
+    /*Infernium Pickaxe*/
+    public static final RegistryObject<PickaxeItem> INFERNIUM_PICKAXE = ITEMS.register("infernium_pickaxe",
+            () -> new PickaxeItem(Tiers.TIERFIVE, 2 /*ATK dmg*/, -2.6f /*ATK spd*/, new Item.Properties()
+                    .tab(Infernium.TAB)
+                    .fireResistant()
+            ) {
+                @Override
+                public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+                    super.appendHoverText(stack, level, components, flag);
+                    components.add(Component.translatable(Infernium.MODID + ".infernium_pickaxe.tooltip"));
+                }
+
+                @Override
+                public boolean hurtEnemy(ItemStack stack, LivingEntity enemy, LivingEntity player) {
+                    enemy.setSecondsOnFire(2);
+                    return super.hurtEnemy(stack, enemy, player);
+                }
+            });
+
 
     // Dragonium Items
     /*Dragon Scale*/
@@ -95,7 +114,6 @@ public class ItemInit {
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
                     super.appendHoverText(stack, level, components, flag);
                     components.add(Component.translatable(Infernium.MODID + ".one_mm_defeater.tooltip"));
-                    components.add(Component.translatable(Infernium.MODID + ".dev_tooltip"));
                 }
 
                 @Override
@@ -110,7 +128,7 @@ public class ItemInit {
 
     // Tiers Class
     public static class Tiers {
-        public static final Tier TIERFIVE = new ForgeTier(5, 2531, 0f, 5.0f, 20, null,
+        public static final Tier TIERFIVE = new ForgeTier(5, 2531, 11.0f, 5.0f, 23, null,
                 () -> Ingredient.of(ItemInit.INFERNIUM_INGOT.get()));
 
         public static final Tier TIERMM = new ForgeTier(42069, 10000000, 69420f, 1000000f, 23459080, null,
