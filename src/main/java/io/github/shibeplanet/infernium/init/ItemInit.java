@@ -28,14 +28,14 @@ public class ItemInit {
     //       drawSpeed: 20.0f
     /* Stone Bow */
     public static final RegistryObject<AdvBowItem> STONE_BOW = ITEMS.register("stone_bow",
-            () -> new AdvBowItem(3.0d, 20.0f, new Item.Properties()
+            () -> new AdvBowItem(2.5d, 20.0f, new Item.Properties()
                     .tab(CreativeModeTab.TAB_COMBAT)
                     .durability(456)
             ));
 
     /* Iron Bow  */
     public static final RegistryObject<AdvBowItem> IRON_BOW = ITEMS.register("iron_bow",
-        () -> new AdvBowItem(4.0d, 20.0f, new Item.Properties()
+        () -> new AdvBowItem(3.0d, 20.0f, new Item.Properties()
                 .tab(CreativeModeTab.TAB_COMBAT)
                 .durability(575)
         ));
@@ -49,14 +49,14 @@ public class ItemInit {
 
     /* Diamond Bow */
     public static final RegistryObject<AdvBowItem> DIAMOND_BOW = ITEMS.register("diamond_bow",
-            () -> new AdvBowItem(5.0d, 20.0f, new Item.Properties()
+            () -> new AdvBowItem(3.5d, 20.0f, new Item.Properties()
                     .tab(CreativeModeTab.TAB_COMBAT)
                     .durability(1886)
             ));
 
     /* Netherite Bow */
     public static final RegistryObject<AdvBowItem> NETHERITE_BOW = ITEMS.register("netherite_bow",
-            () -> new AdvBowItem(7.0d, 20.0f, new Item.Properties()
+            () -> new AdvBowItem(4.0d, 20.0f, new Item.Properties()
                     .tab(CreativeModeTab.TAB_COMBAT)
                     .durability(2356)
             ));
@@ -231,7 +231,7 @@ public class ItemInit {
     /* 4 */
     public static final RegistryObject<AdvBowItem> FOUR = ITEMS.register("four",
             () -> new AdvBowItem(4444444.444d, 4.4f, new Item.Properties()
-                    .tab(CreativeModeTab.TAB_COMBAT)
+                    .tab(Infernium.TAB)
                     .fireResistant()
             ) {
                 @Override
