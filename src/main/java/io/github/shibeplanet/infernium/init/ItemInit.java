@@ -56,7 +56,7 @@ public class ItemInit {
 
     /* Netherite Bow */
     public static final RegistryObject<AdvBowItem> NETHERITE_BOW = ITEMS.register("netherite_bow",
-            () -> new AdvBowItem(4.5d, 20.0f, new Item.Properties()
+            () -> new AdvBowItem(4.0d, 20.0f, new Item.Properties()
                     .tab(CreativeModeTab.TAB_COMBAT)
                     .durability(2356)
             ));
