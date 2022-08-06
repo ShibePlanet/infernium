@@ -179,7 +179,7 @@ public class ItemInit {
 
 
 
-    //// Dragonium Items
+    //// Nihilium Items
     /*Dragon Scale*/
     public static final RegistryObject<Item> DRAGON_SCALE = ITEMS.register("dragon_scale",
             () -> new Item(new Item.Properties()
@@ -192,15 +192,15 @@ public class ItemInit {
             }
     });
 
-    /* Dragonium Ingot */
-    public static final RegistryObject<Item> DRAGONIUM_INGOT = ITEMS.register("dragonium_ingot",
+    /* Nihilium Ingot */
+    public static final RegistryObject<Item> NIHILIUM_INGOT = ITEMS.register("nihilium_ingot",
             () -> new Item(new Item.Properties()
                     .tab(Infernium.TAB)
     ){
             @Override
             public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
                 super.appendHoverText(stack, level, components, flag);
-                components.add(Component.translatable(Infernium.MODID + ".dragonium_ingot.tooltip"));
+                components.add(Component.translatable(Infernium.MODID + ".nihilium_ingot.tooltip"));
             }
     });
 
