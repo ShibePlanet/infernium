@@ -9,11 +9,11 @@ displayName="Infernium"
 #updateJSONURL="https://change.me.example.invalid/updates.json"
 #displayURL="https://change.me.to.your.mods.homepage.example.invalidid/"
 logoFile="examplemod.png"
-credits="ShibePlanet and LucasTM"
-authors="ShibePlanet and LucasTM"
+credits="ShibePlanet, LucasTM and Stanford47"
+authors="ShibePlanet, LucasTM and Stanford47"
 description='''
 Infernium
-Programmed by Shibeplanet.
+Programmed by Shibeplanet and Stanford47.
 Art by LucasTM.
 '''
 
