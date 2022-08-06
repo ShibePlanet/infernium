@@ -28,7 +28,7 @@ public class ItemInit {
     //       drawSpeed: 20.0f
     /*Stone Bow*/
     public static final RegistryObject<AdvBowItem> STONE_BOW = ITEMS.register("stone_bow",
-            () -> new AdvBowItem(2.5d, 20.0f, new Item.Properties()
+            () -> new AdvBowItem(3d, 20.0f, new Item.Properties()
                     .tab(CreativeModeTab.TAB_COMBAT)
                     .durability(515)
             ));

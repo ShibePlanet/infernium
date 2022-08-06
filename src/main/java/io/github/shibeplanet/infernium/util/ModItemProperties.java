@@ -8,7 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 public class ModItemProperties {
     public static void addCustomItemProperties() {
         // By default, drawSpeed is 20. The only reason the argument is there is to support custom bows with custom draw speeds.
-        makeBow(10.0f, ItemInit.STONE_BOW.get());
+        makeBow(20.0f, ItemInit.STONE_BOW.get());
     }
 
     public static void makeBow(float drawSpeed, AdvBowItem item) {
