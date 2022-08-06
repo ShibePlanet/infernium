@@ -1,0 +1,6 @@
+{
+    "parent": "infernium:item/netherite_bow",
+    "textures": {
+      "layer0": "infernium:items/netherite_bow_pulling_1"
+    }
+  }

@@ -2,6 +2,11 @@
   "itemGroup.infernium": "\u00A76\u00A7oInfernium",
 
   "item.infernium.stone_bow": "Stone Bow",
+  "item.infernium.iron_bow": "Iron Bow",
+  "item.infernium.golden_bow": "Golden Bow",
+  "item.infernium.diamond_bow": "Diamond Bow",
+  "item.infernium.netherite_bow": "Netherite Bow",
+
 
   "item.infernium.infernium_ingot": "\u00A76Infernium Ingot",
   "infernium.infernium_ingot.tooltip": "It's warm to the touch.",
@@ -24,6 +29,8 @@
 
   "item.infernium.one_mm_defeater": "\u00A76\u00A7o\u00A7lThe One Millimeter Defeater",
   "infernium.one_mm_defeater.tooltip": "\u00A76\u00A7oIts average guys, I swear!",
+  "item.infernium.four" : "\u00A7c\u00A7l\u00A7oFour",
+  "infernium.four.tooltip" : "\u00A7oba ba ba",
 
   "item.minecraft.bow": "Wooden Bow"
 }

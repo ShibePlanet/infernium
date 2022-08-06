@@ -9,6 +9,11 @@ public class ModItemProperties {
     public static void addCustomItemProperties() {
         // By default, drawSpeed is 20. The only reason the argument is there is to support custom bows with custom draw speeds.
         makeBow(20.0f, ItemInit.STONE_BOW.get());
+        makeBow(20.0f, ItemInit.IRON_BOW.get());
+        makeBow(15.0f, ItemInit.GOLDEN_BOW.get());
+        makeBow(20.0f, ItemInit.DIAMOND_BOW.get());
+        makeBow(20.0f, ItemInit.NETHERITE_BOW.get());
+        makeBow(4.4f, ItemInit.FOUR.get());
     }
 
     public static void makeBow(float drawSpeed, AdvBowItem item) {

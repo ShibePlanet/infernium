@@ -1,0 +1,6 @@
+{
+    "parent": "infernium:item/four",
+    "textures": {
+      "layer0": "infernium:items/four_pulling_2"
+    }
+  }

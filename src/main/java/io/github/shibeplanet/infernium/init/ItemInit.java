@@ -26,15 +26,40 @@ public class ItemInit {
     // Note: wooden bow
     //       baseArrowDamage: 2.0d
     //       drawSpeed: 20.0f
-    /*Stone Bow*/
+    /* Stone Bow */
     public static final RegistryObject<AdvBowItem> STONE_BOW = ITEMS.register("stone_bow",
-            () -> new AdvBowItem(3d, 20.0f, new Item.Properties()
+            () -> new AdvBowItem(3.0d, 20.0f, new Item.Properties()
                     .tab(CreativeModeTab.TAB_COMBAT)
-                    .durability(515)
+                    .durability(456)
             ));
 
+    /* Iron Bow  */
+    public static final RegistryObject<AdvBowItem> IRON_BOW = ITEMS.register("iron_bow",
+        () -> new AdvBowItem(4.0d, 20.0f, new Item.Properties()
+                .tab(CreativeModeTab.TAB_COMBAT)
+                .durability(575)
+        ));
 
+    /* Golden Bow */
+    public static final RegistryObject<AdvBowItem> GOLDEN_BOW = ITEMS.register("golden_bow",
+            () -> new AdvBowItem(2.0d, 15.0f, new Item.Properties()
+                    .tab(CreativeModeTab.TAB_COMBAT)
+                    .durability(91)
+            ));
 
+    /* Diamond Bow */
+    public static final RegistryObject<AdvBowItem> DIAMOND_BOW = ITEMS.register("diamond_bow",
+            () -> new AdvBowItem(5.0d, 20.0f, new Item.Properties()
+                    .tab(CreativeModeTab.TAB_COMBAT)
+                    .durability(1886)
+            ));
+
+    /* Netherite Bow */
+    public static final RegistryObject<AdvBowItem> NETHERITE_BOW = ITEMS.register("netherite_bow",
+            () -> new AdvBowItem(7.0d, 20.0f, new Item.Properties()
+                    .tab(CreativeModeTab.TAB_COMBAT)
+                    .durability(2356)
+            ));
 
     //// Infernium Items
     /*Infernium Ingot*/
@@ -203,6 +228,19 @@ public class ItemInit {
 
     });
 
+    /* 4 */
+    public static final RegistryObject<AdvBowItem> FOUR = ITEMS.register("four",
+            () -> new AdvBowItem(4444444.444d, 4.4f, new Item.Properties()
+                    .tab(CreativeModeTab.TAB_COMBAT)
+                    .fireResistant()
+            ) {
+                @Override
+                public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+                    super.appendHoverText(stack, level, components, flag);
+                    components.add(Component.translatable(Infernium.MODID + ".four.tooltip"));
+                }
+
+    });
 
 
 
