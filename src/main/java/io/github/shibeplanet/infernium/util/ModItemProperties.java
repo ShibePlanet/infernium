@@ -1,23 +1,22 @@
 package io.github.shibeplanet.infernium.util;
 
 import io.github.shibeplanet.infernium.init.ItemInit;
+import io.github.shibeplanet.infernium.items.AdvBowItem;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.CrossbowItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 
 public class ModItemProperties {
     public static void addCustomItemProperties() {
-        makeBow(ItemInit.STONE_BOW.get());
+        // By default, drawSpeed is 20. The only reason the argument is there is to support custom bows with custom draw speeds.
+        makeBow(10.0f, ItemInit.STONE_BOW.get());
     }
 
-    public static void makeBow(Item item) {
+    public static void makeBow(float drawSpeed, AdvBowItem item) {
         ItemProperties.register(item, new ResourceLocation("pull"), (p_174635_, p_174636_, p_174637_, p_174638_) -> {
             if (p_174637_ == null) {
                 return 0.0F;
             } else {
-                return p_174637_.getUseItem() != p_174635_ ? 0.0F : (float)(p_174635_.getUseDuration() - p_174637_.getUseItemRemainingTicks()) / 20.0F;
+                return p_174637_.getUseItem() != p_174635_ ? 0.0F : (float)(p_174635_.getUseDuration() - p_174637_.getUseItemRemainingTicks()) / drawSpeed;
             }
         });
 

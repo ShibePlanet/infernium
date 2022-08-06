@@ -2,6 +2,7 @@ package io.github.shibeplanet.infernium.init;
 
 
 import io.github.shibeplanet.infernium.Infernium;
+import io.github.shibeplanet.infernium.items.AdvBowItem;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.*;
@@ -22,9 +23,12 @@ public class ItemInit {
 
 
     //// Vanilla Bows
+    // Note: wooden bow
+    //       baseArrowDamage: 2.0d
+    //       drawSpeed: 20.0f
     /*Stone Bow*/
-    public static final RegistryObject<Item> STONE_BOW = ITEMS.register("stone_bow",
-            () -> new BowItem(new Item.Properties()
+    public static final RegistryObject<AdvBowItem> STONE_BOW = ITEMS.register("stone_bow",
+            () -> new AdvBowItem(2.5d, 20.0f, new Item.Properties()
                     .tab(CreativeModeTab.TAB_COMBAT)
                     .durability(515)
             ));
