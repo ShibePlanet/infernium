@@ -2,7 +2,11 @@ package io.github.shibeplanet.infernium.init;
 
 import io.github.shibeplanet.infernium.Infernium;
 import io.github.shibeplanet.infernium.items.AdvBowItem;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
+import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -14,6 +18,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 import javax.annotation.Nullable;
 import java.util.List;
+import java.util.UUID;
 
 public class ItemInit {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Infernium.MODID);
@@ -32,7 +37,6 @@ public class ItemInit {
                     .tab(CreativeModeTab.TAB_MISC)
             ));
 
-
     /* Stone Bow */
     public static final RegistryObject<AdvBowItem> STONE_BOW = ITEMS.register("stone_bow",
             () -> new AdvBowItem(2.5d, 20.0f, new Item.Properties()
@@ -42,10 +46,10 @@ public class ItemInit {
 
     /* Iron Bow  */
     public static final RegistryObject<AdvBowItem> IRON_BOW = ITEMS.register("iron_bow",
-        () -> new AdvBowItem(3.0d, 20.0f, new Item.Properties()
-                .tab(CreativeModeTab.TAB_COMBAT)
-                .durability(575)
-        ));
+            () -> new AdvBowItem(3.0d, 20.0f, new Item.Properties()
+                    .tab(CreativeModeTab.TAB_COMBAT)
+                    .durability(575)
+            ));
 
     /* Golden Bow */
     public static final RegistryObject<AdvBowItem> GOLDEN_BOW = ITEMS.register("golden_bow",
@@ -67,6 +71,9 @@ public class ItemInit {
                     .tab(CreativeModeTab.TAB_COMBAT)
                     .durability(2356)
             ));
+
+
+
 
     //// Infernium Items
     /* Infernium Ingot */
@@ -124,7 +131,7 @@ public class ItemInit {
                     enemy.setSecondsOnFire(2);
                     return super.hurtEnemy(stack, enemy, player);
                 }
-            });
+    });
 
     /* Infernium Axe */
     public static final RegistryObject<AxeItem> INFERNIUM_AXE = ITEMS.register("infernium_axe",
@@ -143,7 +150,7 @@ public class ItemInit {
                     enemy.setSecondsOnFire(3);
                     return super.hurtEnemy(stack, enemy, player);
                 }
-            });
+    });
 
     /* Infernium Shovel */
     public static final RegistryObject<ShovelItem> INFERNIUM_SHOVEL = ITEMS.register("infernium_shovel",
@@ -162,11 +169,11 @@ public class ItemInit {
                     enemy.setSecondsOnFire(2);
                     return super.hurtEnemy(stack, enemy, player);
                 }
-            });
+    });
 
     /* Infernium Hoe */
     public static final RegistryObject<HoeItem> INFERNIUM_HOE = ITEMS.register("infernium_hoe",
-            () -> new HoeItem(Tiers.TIERFIVE, -4 /*ATK dmg*/, -3f /*ATK spd*/, new Item.Properties()
+            () -> new HoeItem(Tiers.TIERFIVE, -4 /*ATK dmg*/, 0f /*ATK spd*/, new Item.Properties()
                     .tab(Infernium.TAB)
                     .fireResistant()
             ) {
@@ -181,7 +188,7 @@ public class ItemInit {
                     enemy.setSecondsOnFire(1);
                     return super.hurtEnemy(stack, enemy, player);
                 }
-            });
+    });
 
 
 
@@ -211,6 +218,71 @@ public class ItemInit {
             }
     });
 
+    /* Nihilium Bow */
+    public static final RegistryObject<AdvBowItem> NIHILIUM_BOW = ITEMS.register("nihilium_bow",
+            () -> new AdvBowItem(5.0d, 20.0f, new Item.Properties()
+                    .tab(Infernium.TAB)
+                    .durability(2856)
+    ){
+            @Override
+            public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+                super.appendHoverText(stack, level, components, flag);
+                components.add(Component.translatable(Infernium.MODID + ".nihilium_bow.tooltip"));
+            }
+    });
+
+    /* Nihilium Pickaxe */
+    public static final RegistryObject<PickaxeItem> NIHILIUM_PICKAXE = ITEMS.register("nihilium_pickaxe",
+            () -> new PickaxeItem(Tiers.TIERFIVE, 1 /*ATK dmg*/, -3f /*ATK spd*/, new Item.Properties()
+                    .tab(Infernium.TAB)
+                    .fireResistant()
+            ) {
+                @Override
+                public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+                    super.appendHoverText(stack, level, components, flag);
+                    components.add(Component.translatable(Infernium.MODID + ".nihilium_pickaxe.tooltip"));
+                }
+    });
+
+    /* Nihilium Axe */
+    public static final RegistryObject<AxeItem> NIHILIUM_AXE = ITEMS.register("nihilium_axe",
+            () -> new AxeItem(Tiers.TIERFIVE, 5 /*ATK dmg*/, -3f /*ATK spd*/, new Item.Properties()
+                    .tab(Infernium.TAB)
+                    .fireResistant()
+            ) {
+                @Override
+                public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+                    super.appendHoverText(stack, level, components, flag);
+                    components.add(Component.translatable(Infernium.MODID + ".nihilium_axe.tooltip"));
+                }
+    });
+
+    /* Nihilium Shovel */
+    public static final RegistryObject<ShovelItem> NIHILIUM_SHOVEL = ITEMS.register("nihilium_shovel",
+            () -> new ShovelItem(Tiers.TIERFIVE, 1.5f /*ATK dmg*/, -3f /*ATK spd*/, new Item.Properties()
+                    .tab(Infernium.TAB)
+                    .fireResistant()
+            ) {
+                @Override
+                public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+                    super.appendHoverText(stack, level, components, flag);
+                    components.add(Component.translatable(Infernium.MODID + ".nihilium_shovel.tooltip"));
+                }
+    });
+
+    /* Nihilium Hoe */
+    public static final RegistryObject<HoeItem> NIHILIUM_HOE = ITEMS.register("nihilium_hoe",
+            () -> new HoeItem(Tiers.TIERFIVE, -5 /*ATK dmg*/, 0f /*ATK spd*/, new Item.Properties()
+                    .tab(Infernium.TAB)
+                    .fireResistant()
+            ) {
+                @Override
+                public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+                    super.appendHoverText(stack, level, components, flag);
+                    components.add(Component.translatable(Infernium.MODID + ".nihilium_hoe.tooltip"));
+                }
+    });
+
 
 
 
@@ -232,32 +304,33 @@ public class ItemInit {
                     enemy.setSecondsOnFire(10);
                     return super.hurtEnemy(stack, enemy, player);
                 }
-
     });
 
     /* 4 */
     public static final RegistryObject<AdvBowItem> FOUR = ITEMS.register("four",
-            () -> new AdvBowItem(4444444.444d, 4.4f, new Item.Properties()
+            () -> new AdvBowItem(4444.4444d, 4.4f, new Item.Properties()
                     .tab(Infernium.TAB)
                     .fireResistant()
+                    .stacksTo(4)
             ) {
                 @Override
                 public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
                     super.appendHoverText(stack, level, components, flag);
                     components.add(Component.translatable(Infernium.MODID + ".four.tooltip"));
                 }
-
     });
 
 
 
-    // Tiers Class
+
+    //// Tiers Class
     public static class Tiers {
         public static final Tier TIERFIVE = new ForgeTier(5, 2531, 11.0f, 5.0f, 23, null,
                 () -> Ingredient.of(ItemInit.INFERNIUM_INGOT.get()));
 
         public static final Tier TIERMM = new ForgeTier(42069, 10000000, 69420f, 1000000f, 23459080, null,
                 () -> Ingredient.EMPTY);
+
     }
 
 

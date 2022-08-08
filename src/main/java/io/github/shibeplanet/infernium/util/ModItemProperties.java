@@ -14,6 +14,7 @@ public class ModItemProperties {
         makeBow(20.0f, ItemInit.DIAMOND_BOW.get());
         makeBow(20.0f, ItemInit.NETHERITE_BOW.get());
         makeBow(4.4f, ItemInit.FOUR.get());
+        makeBow(20.0f, ItemInit.NIHILIUM_BOW.get());
     }
 
     public static void makeBow(float drawSpeed, AdvBowItem item) {

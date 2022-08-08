@@ -1,0 +1,6 @@
+{
+  "parent": "infernium:item/nihilium_bow",
+  "textures": {
+    "layer0": "infernium:items/nihilium_bow_pulling_1"
+  }
+}
