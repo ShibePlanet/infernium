@@ -25,6 +25,15 @@
   "item.infernium.infernium_hoe": "§6§o§lInfernium Hoe",
   "infernium.infernium_hoe.tooltip": "§6§oDid you really just craft this?§r\n\n§2Sets enemies on fire for 1 second when hit.",
 
+  "item.infernium.infernium_helmet": "§6§o§lInfernium Helmet",
+  "infernium.infernium_helmet.tooltip": "§6§oThe warmth feels pretty nice on your head.",
+  "item.infernium.infernium_chestplate": "§6§o§lInfernium Chestplate",
+  "infernium.infernium_chestplate.tooltip": "§6§oYou could probably cook an egg on it.",
+  "item.infernium.infernium_leggings": "§6§o§lInfernium Leggings",
+  "infernium.infernium_leggings.tooltip": "§6§oMy pants are on fire!",
+  "item.infernium.infernium_boots": "§6§o§lInfernium Boots",
+  "infernium.infernium_boots.tooltip": "§6§oThey're like very warm socks.",
+
   "item.infernium.dragon_scale": "§dDragon Scale",
   "infernium.dragon_scale.tooltip": "It feels very rough.",
   "item.infernium.nihilium_ingot": "§dNihilium Ingot",
@@ -39,6 +48,15 @@
   "infernium.nihilium_shovel.tooltip": "§d§oPerfect for excavating plots of land.",
   "item.infernium.nihilium_hoe": "§d§o§lNihilium Hoe",
   "infernium.nihilium_hoe.tooltip": "§d§oDid you really just craft this?",
+
+  "item.infernium.nihilium_helmet": "§d§o§lNihilium Helmet",
+  "infernium.nihilium_helmet.tooltip": "§d§oYou hear the energy while wearing the helmet.",
+  "item.infernium.nihilium_chestplate": "§d§o§lNihilium Chestplate",
+  "infernium.nihilium_chestplate.tooltip": "§d§oThe pulses of energy send chills down your spine.",
+  "item.infernium.nihilium_leggings": "§d§o§lNihilium Leggings",
+  "infernium.nihilium_leggings.tooltip": "§d§oThere's emptiness here.",
+  "item.infernium.nihilium_boots": "§d§o§lNihilium Boots",
+  "infernium.nihilium_boots.tooltip": "§d§oWhat are they?",
 
   "item.infernium.one_mm_defeater": "§6§o§lThe One Millimeter Defeater",
   "infernium.one_mm_defeater.tooltip": "§6§oIts average guys, I swear!",

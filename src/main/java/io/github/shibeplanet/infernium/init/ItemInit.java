@@ -1,13 +1,16 @@
 package io.github.shibeplanet.infernium.init;
 
 import io.github.shibeplanet.infernium.Infernium;
+import io.github.shibeplanet.infernium.base.ModArmorMaterial;
 import io.github.shibeplanet.infernium.items.AdvBowItem;
 import io.github.shibeplanet.infernium.items.AutoBowItem;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -122,7 +125,7 @@ public class ItemInit {
 
     /* Infernium Sword */
     public static final RegistryObject<SwordItem> INFERNIUM_SWORD = ITEMS.register("infernium_sword",
-            () -> new SwordItem(Tiers.TIERFIVE, 4 /*ATK dmg*/, -2.2f /*ATK spd*/, new Item.Properties()
+            () -> new SwordItem(ToolTiers.TIERFIVE, 4 /*ATK dmg*/, -2.2f /*ATK spd*/, new Item.Properties()
                     .tab(Infernium.TAB)
                     .fireResistant()
             ) {
@@ -141,7 +144,7 @@ public class ItemInit {
 
     /* Infernium Pickaxe */
     public static final RegistryObject<PickaxeItem> INFERNIUM_PICKAXE = ITEMS.register("infernium_pickaxe",
-            () -> new PickaxeItem(Tiers.TIERFIVE, 2 /*ATK dmg*/, -2.6f /*ATK spd*/, new Item.Properties()
+            () -> new PickaxeItem(ToolTiers.TIERFIVE, 2 /*ATK dmg*/, -2.6f /*ATK spd*/, new Item.Properties()
                     .tab(Infernium.TAB)
                     .fireResistant()
             ) {
@@ -160,7 +163,7 @@ public class ItemInit {
 
     /* Infernium Axe */
     public static final RegistryObject<AxeItem> INFERNIUM_AXE = ITEMS.register("infernium_axe",
-            () -> new AxeItem(Tiers.TIERFIVE, 6 /*ATK dmg*/, -2.8f /*ATK spd*/, new Item.Properties()
+            () -> new AxeItem(ToolTiers.TIERFIVE, 6 /*ATK dmg*/, -2.8f /*ATK spd*/, new Item.Properties()
                     .tab(Infernium.TAB)
                     .fireResistant()
             ) {
@@ -179,7 +182,7 @@ public class ItemInit {
 
     /* Infernium Shovel */
     public static final RegistryObject<ShovelItem> INFERNIUM_SHOVEL = ITEMS.register("infernium_shovel",
-            () -> new ShovelItem(Tiers.TIERFIVE, 2.5f /*ATK dmg*/, -2.8f /*ATK spd*/, new Item.Properties()
+            () -> new ShovelItem(ToolTiers.TIERFIVE, 2.5f /*ATK dmg*/, -2.8f /*ATK spd*/, new Item.Properties()
                     .tab(Infernium.TAB)
                     .fireResistant()
             ) {
@@ -198,7 +201,7 @@ public class ItemInit {
 
     /* Infernium Hoe */
     public static final RegistryObject<HoeItem> INFERNIUM_HOE = ITEMS.register("infernium_hoe",
-            () -> new HoeItem(Tiers.TIERFIVE, -4 /*ATK dmg*/, 0f /*ATK spd*/, new Item.Properties()
+            () -> new HoeItem(ToolTiers.TIERFIVE, -4 /*ATK dmg*/, 0f /*ATK spd*/, new Item.Properties()
                     .tab(Infernium.TAB)
                     .fireResistant()
             ) {
@@ -215,7 +218,57 @@ public class ItemInit {
                 }
     });
 
+    /* Infernium Helmet */
+    public static final RegistryObject<ArmorItem> INFERNIUM_HELMET = ITEMS.register("infernium_helmet",
+            () -> new ArmorItem(ArmorTiers.INFERNIUMARMOR, EquipmentSlot.HEAD, new Item.Properties()
+                    .tab(Infernium.TAB)
+                    .fireResistant()
+            ) {
+                @Override
+                public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+                    super.appendHoverText(stack, level, components, flag);
+                    components.add(Component.translatable(Infernium.MODID + ".infernium_helmet.tooltip"));
+                }
+    });
 
+    /* Infernium Chestplate */
+    public static final RegistryObject<ArmorItem> INFERNIUM_CHESTPLATE = ITEMS.register("infernium_chestplate",
+            () -> new ArmorItem(ArmorTiers.INFERNIUMARMOR, EquipmentSlot.CHEST, new Item.Properties()
+                    .tab(Infernium.TAB)
+                    .fireResistant()
+            ) {
+                @Override
+                public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+                    super.appendHoverText(stack, level, components, flag);
+                    components.add(Component.translatable(Infernium.MODID + ".infernium_chestplate.tooltip"));
+                }
+    });
+
+    /* Infernium Leggings */
+    public static final RegistryObject<ArmorItem> INFERNIUM_LEGGINGS = ITEMS.register("infernium_leggings",
+            () -> new ArmorItem(ArmorTiers.INFERNIUMARMOR, EquipmentSlot.LEGS, new Item.Properties()
+                    .tab(Infernium.TAB)
+                    .fireResistant()
+            ) {
+                @Override
+                public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+                    super.appendHoverText(stack, level, components, flag);
+                    components.add(Component.translatable(Infernium.MODID + ".infernium_leggings.tooltip"));
+                }
+    });
+
+    /* Infernium Boots */
+    public static final RegistryObject<ArmorItem> INFERNIUM_BOOTS = ITEMS.register("infernium_boots",
+            () -> new ArmorItem(ArmorTiers.INFERNIUMARMOR, EquipmentSlot.FEET, new Item.Properties()
+                    .tab(Infernium.TAB)
+                    .fireResistant()
+            ) {
+                @Override
+                public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+                    super.appendHoverText(stack, level, components, flag);
+                    components.add(Component.translatable(Infernium.MODID + ".infernium_boots.tooltip"));
+                }
+    });
 
 
     //// Nihilium Items
@@ -258,7 +311,7 @@ public class ItemInit {
 
     /* Nihilium Pickaxe */
     public static final RegistryObject<PickaxeItem> NIHILIUM_PICKAXE = ITEMS.register("nihilium_pickaxe",
-            () -> new PickaxeItem(Tiers.TIERFIVE, 1 /*ATK dmg*/, -3f /*ATK spd*/, new Item.Properties()
+            () -> new PickaxeItem(ToolTiers.TIERFIVE, 1 /*ATK dmg*/, -3f /*ATK spd*/, new Item.Properties()
                     .tab(Infernium.TAB)
                     .fireResistant()
             ) {
@@ -271,7 +324,7 @@ public class ItemInit {
 
     /* Nihilium Axe */
     public static final RegistryObject<AxeItem> NIHILIUM_AXE = ITEMS.register("nihilium_axe",
-            () -> new AxeItem(Tiers.TIERFIVE, 5 /*ATK dmg*/, -3f /*ATK spd*/, new Item.Properties()
+            () -> new AxeItem(ToolTiers.TIERFIVE, 5 /*ATK dmg*/, -3f /*ATK spd*/, new Item.Properties()
                     .tab(Infernium.TAB)
                     .fireResistant()
             ) {
@@ -284,7 +337,7 @@ public class ItemInit {
 
     /* Nihilium Shovel */
     public static final RegistryObject<ShovelItem> NIHILIUM_SHOVEL = ITEMS.register("nihilium_shovel",
-            () -> new ShovelItem(Tiers.TIERFIVE, 1.5f /*ATK dmg*/, -3f /*ATK spd*/, new Item.Properties()
+            () -> new ShovelItem(ToolTiers.TIERFIVE, 1.5f /*ATK dmg*/, -3f /*ATK spd*/, new Item.Properties()
                     .tab(Infernium.TAB)
                     .fireResistant()
             ) {
@@ -297,7 +350,7 @@ public class ItemInit {
 
     /* Nihilium Hoe */
     public static final RegistryObject<HoeItem> NIHILIUM_HOE = ITEMS.register("nihilium_hoe",
-            () -> new HoeItem(Tiers.TIERFIVE, -5 /*ATK dmg*/, 0f /*ATK spd*/, new Item.Properties()
+            () -> new HoeItem(ToolTiers.TIERFIVE, -5 /*ATK dmg*/, 0f /*ATK spd*/, new Item.Properties()
                     .tab(Infernium.TAB)
                     .fireResistant()
             ) {
@@ -308,13 +361,63 @@ public class ItemInit {
                 }
     });
 
+    /* Nihilium Helmet */
+    public static final RegistryObject<ArmorItem> NIHILIUM_HELMET = ITEMS.register("nihilium_helmet",
+            () -> new ArmorItem(ArmorTiers.NIHILIUMARMOR, EquipmentSlot.HEAD, new Item.Properties()
+                    .tab(Infernium.TAB)
+                    .fireResistant()
+            ) {
+                @Override
+                public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+                    super.appendHoverText(stack, level, components, flag);
+                    components.add(Component.translatable(Infernium.MODID + ".nihilium_helmet.tooltip"));
+                }
+            });
 
+    /* Nihilium Chestplate */
+    public static final RegistryObject<ArmorItem> NIHILIUM_CHESTPLATE = ITEMS.register("nihilium_chestplate",
+            () -> new ArmorItem(ArmorTiers.NIHILIUMARMOR, EquipmentSlot.CHEST, new Item.Properties()
+                    .tab(Infernium.TAB)
+                    .fireResistant()
+            ) {
+                @Override
+                public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+                    super.appendHoverText(stack, level, components, flag);
+                    components.add(Component.translatable(Infernium.MODID + ".nihilium_chestplate.tooltip"));
+                }
+            });
+
+    /* Nihilium Leggings */
+    public static final RegistryObject<ArmorItem> NIHILIUM_LEGGINGS = ITEMS.register("nihilium_leggings",
+            () -> new ArmorItem(ArmorTiers.NIHILIUMARMOR, EquipmentSlot.LEGS, new Item.Properties()
+                    .tab(Infernium.TAB)
+                    .fireResistant()
+            ) {
+                @Override
+                public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+                    super.appendHoverText(stack, level, components, flag);
+                    components.add(Component.translatable(Infernium.MODID + ".nihilium_leggings.tooltip"));
+                }
+            });
+
+    /* Nihilium Boots */
+    public static final RegistryObject<ArmorItem> NIHILIUM_BOOTS = ITEMS.register("nihilium_boots",
+            () -> new ArmorItem(ArmorTiers.NIHILIUMARMOR, EquipmentSlot.FEET, new Item.Properties()
+                    .tab(Infernium.TAB)
+                    .fireResistant()
+            ) {
+                @Override
+                public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+                    super.appendHoverText(stack, level, components, flag);
+                    components.add(Component.translatable(Infernium.MODID + ".nihilium_boots.tooltip"));
+                }
+            });
 
 
     //// Developer Items
     /* One Millimeter Defeater */
     public static final RegistryObject<SwordItem> ONE_MM_DEFEATER = ITEMS.register("one_mm_defeater",
-            () -> new SwordItem(Tiers.TIERMM, 1000 /*ATK dmg*/, 1000.0f /*ATK spd*/, new Item.Properties()
+            () -> new SwordItem(ToolTiers.TIERMM, 1000 /*ATK dmg*/, 1000.0f /*ATK spd*/, new Item.Properties()
                     .tab(Infernium.TAB)
                     .fireResistant()
             ) {
@@ -349,7 +452,7 @@ public class ItemInit {
 
 
     //// Tiers Class
-    public static class Tiers {
+    public static class ToolTiers {
         public static final Tier TIERFIVE = new ForgeTier(5, 2531, 11.0f, 5.0f, 23, null,
                 () -> Ingredient.of(ItemInit.INFERNIUM_INGOT.get()));
 
@@ -358,5 +461,11 @@ public class ItemInit {
 
     }
 
+    public static class ArmorTiers {
+        public static final ArmorMaterial INFERNIUMARMOR = new ModArmorMaterial("infernium", 42, new int[] { 5, 8, 10, 5 }, 23, SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0f, 0.4f,
+            () -> Ingredient.of(ItemInit.INFERNIUM_INGOT.get()));
 
+        public static final ArmorMaterial NIHILIUMARMOR = new ModArmorMaterial("nihilium", 42, new int[] { 4, 7, 9, 4 }, 23, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.5f, 0.4f,
+                () -> Ingredient.of(ItemInit.NIHILIUM_INGOT.get()));
+    }
 }
