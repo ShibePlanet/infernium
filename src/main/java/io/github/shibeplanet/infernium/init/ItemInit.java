@@ -2,6 +2,7 @@ package io.github.shibeplanet.infernium.init;
 
 import io.github.shibeplanet.infernium.Infernium;
 import io.github.shibeplanet.infernium.items.AdvBowItem;
+import io.github.shibeplanet.infernium.items.AutoBowItem;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.Tag;
@@ -71,6 +72,30 @@ public class ItemInit {
                     .tab(CreativeModeTab.TAB_COMBAT)
                     .durability(2356)
             ));
+
+
+
+
+    //// Auto-Bows
+    /* Auto-Bow */
+    public static final RegistryObject<AutoBowItem> AUTO_BOW = ITEMS.register("auto_bow",
+            () -> new AutoBowItem(3.3d, 6.6f, new Item.Properties()
+                    .tab(Infernium.TAB)
+                    .durability(1229)
+            ));
+
+    /* Super Auto-Bow */
+    public static final RegistryObject<AutoBowItem> SUPER_AUTO_BOW = ITEMS.register("super_auto_bow",
+            () -> new AutoBowItem(3.8d, 3.3f, new Item.Properties()
+                    .tab(Infernium.TAB)
+                    .durability(2151)
+            ) {
+                @Override
+                public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+                    super.appendHoverText(stack, level, components, flag);
+                    components.add(Component.translatable(Infernium.MODID + ".super_auto_bow.tooltip"));
+                }
+            });
 
 
 

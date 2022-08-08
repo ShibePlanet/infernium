@@ -1,0 +1,6 @@
+{
+    "parent": "infernium:item/super_auto_bow",
+    "textures": {
+      "layer0": "infernium:items/super_auto_bow_pulling_2"
+    }
+  }

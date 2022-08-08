@@ -8,6 +8,10 @@
   "item.infernium.diamond_bow": "Diamond Bow",
   "item.infernium.netherite_bow": "Netherite Bow",
 
+  "item.infernium.auto_bow": "Auto-Bow",
+  "item.infernium.super_auto_bow": "Super Auto-Bow",
+  "infernium.super_auto_bow.tooltip": "§7It's a rapid-fire bow. Hell yeah!",
+
   "item.infernium.infernium_ingot": "§6Infernium Ingot",
   "infernium.infernium_ingot.tooltip": "It's warm to the touch.",
   "item.infernium.infernium_sword": "§6§o§lInfernium Sword",
